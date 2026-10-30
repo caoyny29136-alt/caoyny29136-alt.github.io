@@ -1,14 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f472b6" />
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff8f2" />
+      <stop offset="1" stop-color="#fde7ef" />
+    </linearGradient>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9a8d4" />
       <stop offset="1" stop-color="#ec4899" />
     </linearGradient>
   </defs>
-  <rect width="128" height="128" rx="28" fill="#fdf2f8" />
+
+  <rect width="128" height="128" rx="28" fill="url(#bg)" />
+
+  <!-- 后面露出的纸页 -->
+  <rect x="40" y="26" width="64" height="78" rx="9" fill="#ffffff" />
+  <rect x="40" y="26" width="64" height="78" rx="9" fill="none" stroke="#f9a8d4" stroke-width="1.4" opacity="0.55" />
+
+  <!-- 书封 -->
+  <rect x="26" y="22" width="72" height="84" rx="11" fill="url(#cover)" />
+  <!-- 书脊 -->
+  <rect x="26" y="22" width="13" height="84" rx="6" fill="#db2777" opacity="0.5" />
+  <!-- 书签丝带 -->
+  <path d="M84 22h10v20l-5-4-5 4z" fill="#fbcfe8" />
+
+  <!-- 封面上的白爱心 -->
   <path
-    d="M64 96 C48 86 35 74 35 57 C35 47 43 39 53 39 C59 39 63.5 42 66 46.5 C68.5 42 73 39 79 39 C89 39 97 47 97 57 C97 74 84 86 64 96 Z"
-    fill="url(#g)"
+    d="M62 80 C50 70 44 63 44 55 C44 48.5 49 44 55.5 44 C59.5 44 62 46.4 63.6 49.2 C65.2 46.4 67.7 44 71.7 44 C78.2 44 83.2 48.5 83.2 55 C83.2 63 77.2 70 65.2 80 Z"
+    fill="#ffffff"
+    opacity="0.95"
   />
-  <circle cx="52" cy="47" r="4.5" fill="#ffffff" opacity="0.5" />
+  <circle cx="56" cy="53" r="2.4" fill="#fbcfe8" />
+
+  <!-- 两颗小点：蓝与粉 -->
+  <circle cx="107" cy="30" r="3" fill="#93c5fd" opacity="0.9" />
+  <circle cx="21" cy="99" r="2.4" fill="#f9a8d4" opacity="0.85" />
 </svg>
